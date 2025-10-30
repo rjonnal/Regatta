@@ -1,1 +1,1 @@
-# RegATTA:  Registration for Three-dimensional Tomographic Analysis
+# RegATTA:  Registration for Advanced Three-dimensional Tomographic Analysis
