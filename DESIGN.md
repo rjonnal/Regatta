@@ -37,10 +37,13 @@ This software will permit users to align sequential OCT images for the purposes 
 Justification: it can store its own N-dim DFT to avoid repeated DFTs for every target image
 
 Data:
+
 	* image data, numpy ndarray
+	
 	* FFTN of image data, numpy ndarray
 
 Functions:
+
 	* register: input a target image (either B-scan, volume chunk, or full volume) and return coordinates of its location in the reference image, the peak of the cross-correlation used to register it, and other measures of correlation (Dice coefficient, Pearson correlation) applied to the amplitude and the phase
 
 
