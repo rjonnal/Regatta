@@ -26,11 +26,27 @@ This software will permit users to align sequential OCT images for the purposes 
 
 ### General ideas
 
-1. Overall design will use classes when useful and functions when useful.
+1. Overall design will be hybrid object-oriented/functional.
 
-2.
+2. Don't worry too much about speed/optimization at this stage, but keep the following in mind: DFT acceleration using CuPy or numba; the data will be too big to keep in RAM at all once, but we also want to minimize disk access.
 
 ### Classes
 
-`ReferenceVolume`: 
+#### `ReferenceVolume`
+
+Justification: it can store its own N-dim DFT to avoid repeated DFTs for every target image
+
+Data:
+	* image data, numpy ndarray
+	* FFTN of image data, numpy ndarray
+
+Functions:
+	* register: input a target image (either B-scan, volume chunk, or full volume) and return coordinates of its location in the reference image, the peak of the cross-correlation used to register it, and other measures of correlation (Dice coefficient, Pearson correlation) applied to the amplitude and the phase
+
+
+### Documentation
+
+Use [Google-style Python docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html), but don't go overboard! We'll later use [lazydocs](https://github.com/ml-tooling/lazydocs) to create github/gitlab Markdown for a simple API reference page.
+
+
 
