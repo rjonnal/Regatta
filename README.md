@@ -25,4 +25,3 @@ The _RegATTA_ project is supported by (funding number)
 - Visual comparison between ref image, and selected post-reg image
 
 ## Table of Contents
-aaaa
