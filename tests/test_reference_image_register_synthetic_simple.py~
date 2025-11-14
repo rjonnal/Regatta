@@ -1,0 +1,13 @@
+"""
+Created on 14 November 2025
+@author:RSJ
+
+In this test we generate some random data and check the `register` method
+of `reference_image.ReferenceImage`.
+"""
+import regatta
+
+sample = np.random.rand(100,10,20)
+
+# create a ReferenceImage object based on the sample data
+refim = regatta.reference_image.ReferenceImage(sample)

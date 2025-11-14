@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Nov 13
+
+@author: RSJ
+
+"""
+
+import glob,os
+import numpy as np
+def load_image_aooct(location):
+    files = glob.glob(os.path.join(location,'bscan*.npy'))
+    files.sort()
+    image = [np.load(f) for f in files]
+    dtype = image[0].dtype
+    image = np.array(image,dtype=dtype)
+    return image

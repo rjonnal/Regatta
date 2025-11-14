@@ -1,0 +1,17 @@
+"""
+Created on Thu Nov 13
+@author: RSJ
+
+Because RegATTA is designed to work with various kinds of OCT data
+and file types, the user/caller is expected to provide a function that
+loads images. It's signature should be:
+
+```
+def load_image(location):
+    ...
+    ...
+    return image
+```
+
+`location` can be a folder or a file containing an image.
+"""
